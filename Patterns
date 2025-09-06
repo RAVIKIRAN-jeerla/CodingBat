@@ -1,0 +1,103 @@
+#Right Angled Triangle
+package RK;
+public class RightTriangle {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+#Arrow
+package RK;
+
+public class Arrow {
+    public static void main(String[] args) {
+        int rows = 6;
+        for (int i = 1; i <= rows; i++) {
+            if (i <= rows / 2) {
+                for (int j = 1; j <= rows/2-i+1; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = 1; k <= 1; k++) {
+                    System.out.print("*");
+                }
+                if (i>1){
+                for (int l = 1; l <= (i * 2) - 3; l++) {
+                    System.out.print(" ");
+                }
+                for (int m = 1; m <= 1; m++) {
+                    System.out.print("*");
+                }
+            }}
+
+                else if (i == rows / 2 + 1) {
+                for (int n = 1; n <= rows + 1; n++) {
+                    System.out.print("*");
+                }
+            } else {
+                for (int o = 1; o <= 1; o++) {
+                    System.out.print(" ");
+                }
+                for (int p = 1; p <= rows - 1; p++) {
+                    System.out.print("*");
+                }
+            }
+
+            System.out.println();
+
+        }
+    }
+}
+
+#Rectangle
+package RK;
+public class Rectangle {
+    public static void main(String[] args) {
+        int rows = 8;
+        for (int i = 1; i <= rows; i++) {
+            if (i == 1 || i == rows) {
+                for (int j = 1; j <= rows; j++) {
+                    System.out.print("*");
+                }
+            } else {
+                for (int k = 1; k <= 1; k++) {
+                    System.out.print("*");
+                }
+                for (int l = 1; l <= rows - 2; l++) {
+                    System.out.print(" ");
+                }
+                for (int m = 1; m <= 1; m++) {
+                    System.out.print("*");
+                }
+
+            }
+            System.out.println();
+        }
+    }
+}
+
+#pyramid
+package RK;
+public class Pyramid {
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j < n; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
