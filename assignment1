@@ -1,0 +1,153 @@
+#SIMPLE INTREST
+import java.util.Scanner;
+
+public class SimpleIntrest {
+    public static void main(String[] args) {
+        int r;
+        double intrest;
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter the Principal Amount and then Time");
+        int p=input.nextInt();
+        int t=input.nextInt();
+        if(p>10000) {
+            r=10;
+             intrest = (p * t * r) / 100;
+        }
+        else if (p>=5000&&p<=10000){
+            r=8;
+            intrest=(p * t * r)/100;
+
+        }
+        else {
+            r=5;
+            intrest=(p * t * r)/100;
+
+        }
+        System.out.println("SIMPLE INTREST FOR YOUR INPUTS IS : "+intrest);
+    }
+}
+
+--------------------------------------------------------------------------------------------
+
+# STUDENT GRADING 
+import java.util.Scanner;
+
+public class Grade {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter the obtained marks for your subject respectively");
+        System.out.println("enter the obtained marks for english out of 100");
+        int english=input.nextInt();
+        System.out.println("enter the obtained marks for kannada out of 100");
+        int kannada=input.nextInt();
+        System.out.println("enter the obtained marks for physics out of 100");
+        int physics= input.nextInt();
+        System.out.println("enter the obtained marks for chemistry out of 100");
+        int chemistry=input.nextInt();
+        System.out.println("enter the obtained marks for Maths out of 100");
+        int maths=input.nextInt();
+        int total=english+kannada+physics+chemistry+maths;
+        double average=total/5;
+        if(average>90){
+            System.out.println("your grade is : A+");
+        }
+        else if (average>80&&average<=90){
+            System.out.println("your grade is : A");
+        }
+        else if (average>60&&average<=80){
+            System.out.println("your grade is : B+");
+        }
+        else if (average>=40&&average<=60){
+            System.out.println("your grade is : B");
+        }
+        else {
+            System.out.println("You Failed in this exam ,Better luck next time");
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------
+
+#BILLING
+import java.util.Scanner;
+
+public class Billing {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter how many GB data you have consumed in this month");
+        int data=input.nextInt();
+        int amount;
+        if (data<=10){
+            System.out.println(" You have to pay 300 rupees");
+        }
+        else if (data>10&&data<=30){
+             amount=5*(data-10)+300;
+            System.out.println("you have to pay "+amount);
+        }
+        else{
+            amount=3*(data-30)+400;
+            System.out.println("you have to pay "+amount);
+        }
+
+    }
+}
+
+----------------------------------------------------------------------------------------------
+
+#SUM AND AVERAGEF ARRAYS
+import java.util.Scanner;
+
+public class AddArrays {
+    public static void main(String[] args) {
+        int sum=0;
+        double average;
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter the array size");
+        int n=input.nextInt();
+        int [] arr= new int[n];
+        System.out.println(" enter the array elements");
+        for(int i=0;i<n;i++){
+          arr[i]=input.nextInt();
+        }
+        for (int j=0;j<n;j++){
+            sum+=arr[j];
+        }
+        average=sum/n;
+        System.out.println(" Sum of the Array is "+sum);
+        System.out.println(" Average of Array is "+average);
+
+    }
+}
+
+---------------------------------------------------------------------------------------------
+
+#SORTING ARRAY
+
+import java.util.Scanner;
+
+public class Sorting {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("enter the size of the array");
+        int n=input.nextInt();
+        int[]array=new int[n];
+        System.out.println(" enter the array elements");
+        for (int i=0;i<n;i++){
+            array[i]=input.nextInt();
+        }
+        for ( int j=0;j<n-1;j++){
+            for (int k=0;k<n-1-j;k++){
+                if (array[k]>array[k+1]){
+                    int temp=array[k];
+                    array[k]=array[k+1];
+                    array[k+1]=temp;
+                }
+            }
+        }
+        System.out.println("Sorted Array in Ascending order");
+        for (int m:array){
+            System.out.print(+m+" ");
+        }
+    }
+}
+
