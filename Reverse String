@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class ReverseListExample {
+    public static void main(String[] args) {
+        List<String> fruits = new ArrayList<String>();
+        fruits.add("apple");
+        fruits.add("banana");
+        fruits.add("cherry");
+        fruits.add("date");
+
+        System.out.println("Original List: " + fruits);
+
+        Collections.reverse(fruits);
+
+        System.out.println("Reversed List: " + fruits);
+    }
+}
